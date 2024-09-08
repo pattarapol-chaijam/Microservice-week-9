@@ -24,11 +24,11 @@ export class PetService {
   }
 
   findAll() {
-    return this.petRepository.find();
+    return this.petRepository.find({ relations: ['owner'] });
   }
 
   findOne(id: number) {
-    return this.petRepository.findOne({ where: { id } });
+    return this.petRepository.findOne({ where: { id }, relations: ['owner'] });
   }
 
   async update(id: number, updatePetInput: UpdatePetInput) {

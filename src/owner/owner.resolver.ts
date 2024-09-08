@@ -13,7 +13,7 @@ export class OwnerResolver {
     return this.ownerService.create(createOwnerInput);
   }
 
-  @Query(() => [Owner], { name: 'owner' })
+  @Query(() => [Owner], { name: 'owners' })
   findAll() {
     return this.ownerService.findAll();
   }

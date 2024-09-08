@@ -13,7 +13,7 @@ export class PetResolver {
     return this.petService.create(createPetInput);
   }
 
-  @Query(() => [Pet], { name: 'pet' })
+  @Query(() => [Pet], { name: 'pets' })
   findAll() {
     return this.petService.findAll();
   }
